@@ -1,0 +1,39 @@
+{
+  "name": "perlcpanfile",
+  "displayName": "Perl cpanfile",
+  "description": "Makes Perl cpanfile awesome",
+  "version": "0.0.1",
+  "publisher": "bayashi",
+  "author": {
+    "name": "Dai Okabayashi"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bayashi/perlcpanfile"
+  },
+  "icon": "images/perlcpanfile_icon.png",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cpanfile",
+        "aliases": ["Cpanfile", "cpanfile"],
+        "extensions": [""],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cpanfile",
+        "scopeName": "source.cpanfile",
+        "path": "./syntaxes/cpanfile.tmLanguage.json"
+      }
+    ]
+  }
+}

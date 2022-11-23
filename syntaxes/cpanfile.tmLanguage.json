@@ -1,0 +1,114 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "cpanfile",
+	"scopeName": "source.cpanfile",
+	"patterns": [
+		{ "include": "#functionRequires" },
+		{ "include": "#functionRequiresShortcut" },
+		{ "include": "#functionOn" },
+		{ "include": "#functionFeature" },
+		{ "include": "#stringVersion" },
+		{ "include": "#stringsDoubleQuoted" },
+		{ "include": "#stringsSingleQuoted" },
+		{ "include": "#operator" },
+		{ "include": "#sentenceEnd" },
+		{ "include": "#comment" }
+	],
+	"repository": {
+		"functionRequires": {
+			"patterns": [
+				{
+					"match": "\\b(requires|recommends|suggests|conflicts)\\b",
+					"name": "entity.name.tag.cpanfile"
+				}
+			]
+		},
+		"functionRequiresShortcut": {
+			"patterns": [
+				{
+					"match": "\\b(configure|build|test|author)_requires\\b",
+					"name": "entity.name.tag.cpanfile"
+				}
+			]
+		},
+		"functionOn": {
+			"patterns": [
+				{
+					"match": "\\b(on)\\b",
+					"name": "keyword.control.cpanfile"
+				}
+			]
+		},
+		"functionFeature": {
+			"patterns": [
+				{
+					"match": "\\b(feature)\\b",
+					"name": "keyword.control.cpanfile"
+				}
+			]
+		},
+		"stringVersion": {
+			"patterns": [
+				{
+					"match": "[\"'][v0-9._!=<>, ]*[\"']",
+					"name": "constant.character.escape.cpanfile"
+				}
+			]
+		},
+		"stringsDoubleQuoted": {
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"match": "[^\"]*",
+					"name": "constant.numeric.cpanfile"
+				}
+			],
+			"name": "normal.cpanfile"
+		},
+		"stringsSingleQuoted": {
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"match": "[^']*",
+					"name": "constant.numeric.cpanfile"
+				}
+			],
+			"name": "normal.cpanfile"
+		},
+		"operator": {
+			"patterns": [
+				{
+					"match": "(=>|,)",
+					"name": "keyword.operator.cpanfile"
+				}
+			]
+		},
+		"sentenceEnd": {
+			"patterns": [
+				{
+					"match": ";",
+					"name": "entity.name.section.cpanfile"
+				}
+			]
+		},
+		"comment": {
+			"begin": "(^[ \\t]+)?(?=#)",
+			"beginCaptures": {
+				"1": {
+					"name": "comment.line.cpanfile"
+				}
+			},
+			"end": "(?!\\G)",
+			"patterns": [
+				{
+					"begin": "#",
+					"end": "\\n",
+					"name": "comment.line.cpanfile"
+				}
+			],
+			"name": "comment.cpanfile"
+		}
+	}
+}

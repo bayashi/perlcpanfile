@@ -1,0 +1,18 @@
+# cpanfile
+requires 'perl', '5.008005';
+requires 'strict';
+requires 'warnings';
+
+requires 'Plack', '1.0'; # 1.0 or newer
+requires 'JSON', '>= 2.00, < 2.80';
+
+on 'test' => sub {
+    requires 'Test::More', '>= 0.96, < 2.0';
+    recommends 'Test::TCP', '1.12';
+};
+
+feature 'sqlite', 'SQLite support' => sub {
+    recommends 'DBD::SQLite';
+};
+
+test_requires "Capture::Tiny";
