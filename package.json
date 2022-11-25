@@ -23,7 +23,7 @@
     "languages": [
       {
         "id": "cpanfile",
-        "aliases": ["Cpanfile", "cpanfile"],
+        "aliases": ["cpanfile", "cpanfile"],
         "extensions": [""],
         "configuration": "./language-configuration.json"
       }
