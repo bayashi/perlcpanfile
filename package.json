@@ -19,6 +19,12 @@
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "perl",
+    "cpanfile",
+    "highlight",
+    "highlighter"
+  ],
   "contributes": {
     "languages": [
       {
